@@ -12,23 +12,28 @@ import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.support.ui.WebDriverWait
 
 public class locators {
+	
+	/*WebDriver driver;
+	 driver = WebDriverManager.chromedriver().create();*/
 
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
-System.setProperty("webdriver.chrome.driver", "C:\\Users\\siva\\Desktop\\DSiva\\chromedriver_win32\\chromedriver.exe");
+//System.setProperty("webdriver.chrome.driver", "C:\\Users\\siva\\Desktop\\DSiva\\chromedriver_win32\\chromedriver.exe");
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sivaramakrishna\\Downloads\\chromedriver_win32 (3)\\\\chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
 		
 		//driver.findElement(By.className("M6CB1c rr4y5c")).click();
 		driver.get("https://admin5.beta-wspbx.com");
+		Thread.sleep(8000);
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath("//*[@id=\"xusername\"]")).sendKeys("adminuser@socrates");
 		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("abc@12345");
 		driver.findElement(By.xpath("//*[@id=\"mainlogin\"]/div/div/input[2]")).click();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//*[@id=\"tab3\"]/a")).click();
 		driver.findElement(By.xpath("//*[@id=\"deepsearch_topfrm\"]")).sendKeys("admgrpr");
 		driver.findElement(By.xpath("//*[@id=\"UserMainAction\"]/input[31]")).click();
