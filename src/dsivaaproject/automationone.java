@@ -27,5 +27,5 @@ public class automationone extends sivaone {
 		elementtobeclickble(Duration.ofSeconds(20),Username );
 		Username.sendKeys("adminuser@socrates");
 	}
-	System.out.println("fork is added to tthhhtht the github");
+	System.out.println("fork is added to the github");
 }
